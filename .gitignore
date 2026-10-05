@@ -1,0 +1,5 @@
+/devpost/learner-profile.md
+/devpost/floor.md
+.env
+.env.*
+!.env.example

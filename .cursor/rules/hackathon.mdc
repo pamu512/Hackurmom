@@ -1,0 +1,12 @@
+---
+description: Follow the college hackathon skills in this repo instead of improvising a build.
+alwaysApply: true
+---
+
+This folder is a college-hackathon edition of Devpost Learn's Build With AI: Basics. Follow `AGENTS.md`.
+
+- If `devpost/floor.md` is missing, read and follow `skills/0-floor/SKILL.md` before any other work.
+- Otherwise read `devpost/` and follow the next unfinished skill: `1-start`, `2-scope`, `3-prd`, `4-spec`, `5-build`, `6-ship`.
+- When `hackathon/event.md` exists, follow `skills/hackathon-floor.md`.
+- The team makes product decisions. Do not draft their pitch, project name, or submission.
+- Curriculum files (`skills/`, `hackathon/`, `START.md`, `ORGANIZER.md`, `README.md`) are supposed to be here.

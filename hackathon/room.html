@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hackurmom — HKUST</title>
+  <style>
+    :root {
+      --paper: #f4efe4;
+      --ink: #1c1915;
+      --muted: #5e584e;
+      --line: #d8d0c2;
+      --accent: #b8421a;
+      --accent-soft: #f3d7cc;
+      --card: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% -10%, #f7e1d4 0, transparent 42%),
+        var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 28px 28px 20px;
+    }
+    .eyebrow {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 0.95;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 14px 0 10px;
+      max-width: 14ch;
+    }
+    .lead {
+      font-size: 20px;
+      line-height: 1.4;
+      max-width: 38em;
+      margin: 0 0 16px;
+    }
+    .say {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .say span {
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e7b5a4;
+    }
+    .say strong {
+      display: block;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 22px;
+      margin-top: 16px;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 8px 18px 16px;
+    }
+    .panel h2, .done h2 {
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    ol { list-style: none; margin: 0; padding: 0; }
+    li {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 12px;
+      padding: 7px 0;
+      border-top: 1px solid var(--line);
+    }
+    li b { font-size: 18px; }
+    li small {
+      display: block;
+      color: var(--muted);
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .time {
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: var(--accent);
+      padding-top: 4px;
+    }
+    .done {
+      background: var(--accent);
+      color: #fffaf6;
+      padding: 18px 20px 8px;
+    }
+    .done h2 { color: #f6cfc3; }
+    .done ul { margin: 0; padding: 0 0 8px 18px; }
+    .done li {
+      display: list-item;
+      border: 0;
+      padding: 6px 0;
+      font-size: 18px;
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 18px;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .foot b { color: var(--ink); }
+    @media (max-width: 800px) {
+      main { padding: 24px 16px 36px; }
+      .grid, .say, .foot, .eyebrow { display: block; }
+      .eyebrow span { display: block; }
+      .eyebrow span + span { margin-top: 6px; }
+      .say strong { margin-top: 6px; }
+      li { grid-template-columns: 72px 1fr; }
+      .foot p + p { margin-top: 10px; }
+    }
+    @media print {
+      body { background: white; }
+      .say, .done { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">
+      <span>hackurmom · HKUST</span>
+      <span>3-hour workshop</span>
+    </p>
+    <h1>Plan it, then show it running.</h1>
+    <p class="lead">You do not need to have written code before. One laptop per team. You decide what it does and what to cut. The agent writes it. You try it in the browser and tell the judges what they are seeing.</p>
+    <div class="say">
+      <span>Type this to your agent</span>
+      <strong>Start the hackathon</strong>
+    </div>
+    <div class="grid">
+      <section class="panel">
+        <h2>Clock</h2>
+        <ol>
+          <li><span class="time">0:00</span><div><b>Start</b><small>Who’s here, and what you want to make.</small></div></li>
+          <li><span class="time">0:10</span><div><b>Idea</b><small>One thing a judge can see. Cut the rest.</small></div></li>
+          <li><span class="time">0:35</span><div><b>What it does</b><small>What a person sees and does.</small></div></li>
+          <li><span class="time">1:00</span><div><b>How it's built</b><small>A web page. No new accounts.</small></div></li>
+          <li><span class="time">1:20</span><div><b>Build</b><small>You click it. The agent writes it.</small></div></li>
+          <li><span class="time">2:35</span><div><b>Show it</b><small>Practice the demo out loud.</small></div></li>
+        </ol>
+      </section>
+      <section class="done">
+        <h2>Done today</h2>
+        <ul>
+          <li>It runs in the browser on this laptop.</li>
+          <li>A judge sees it in 300 seconds.</li>
+          <li>GitHub is public, and RUN.md starts the demo.</li>
+          <li>You can name one decision and one cut.</li>
+        </ul>
+      </section>
+    </div>
+    <div class="foot">
+      <p><b>One driver.</b> Everyone else answers. Rotate between steps if you want.</p>
+      <p><b>You write the pitch.</b> The agent can list the clicks. It does not write your sentences.</p>
+      <p><b>No API keys in chat.</b> If a demo needs a credit card, it is the wrong demo.</p>
+    </div>
+  </main>
+</body>
+</html>

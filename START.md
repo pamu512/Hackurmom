@@ -1,6 +1,6 @@
 # Start here
 
-You have about three hours to plan a small project and build a proof of concept you can demo on this laptop. One person types. The whole team decides.
+You will plan a small project and build a proof of concept you can demo on this laptop. One person types. The whole team decides. There is no hard time limit — work at your team's pace, use the milestones below, and stop building when your organizer calls the freeze before the demo slot.
 
 You do not need to have written code before. That is the normal case in this room. You say what it should do, what to leave out, and what you see when you click it. The agent writes the code and runs the commands. You will not use the terminal.
 
@@ -23,16 +23,20 @@ Stay in this folder. The skills live here. Do not start in Downloads or in some 
 
 ## What you will do
 
-| When | What |
-|---|---|
-| First 10 minutes | Who is on the team, and what you want to build |
-| Until about 0:35 | Cut the idea until a judge can see the point in one pass |
-| Until about 1:00 | Decide what someone sees and does |
-| Until about 1:20 | Agree that it is a web page you open in the browser |
-| Until about 2:35 | The agent builds it. You click it and say what you see |
-| Last 25 minutes | Rehearse the live demo and push a public GitHub repo |
+Work through the milestones in order. Most teams take about three hours; your team sets its own pace.
 
-Times assume the default 3-hour workshop. Your organizer's `hackathon/event.md` wins if they changed it.
+| # | Milestone | What happens |
+|---|---|---|
+| 1 | Start | Who is on the team, and what you want to build |
+| 2 | Idea | Cut it until a judge can see the point in one pass |
+| 3 | What it does | Decide what someone sees and does |
+| 4 | How it's built | Agree that it is a web page you open in the browser |
+| 5 | Build | The agent builds it. You click it and say what you see |
+| 6 | Show it | Rehearse the live demo and push a public GitHub repo |
+
+When your organizer calls the build freeze (usually 25 minutes before the demo slot), all building stops and every team rehearses. That is the only deadline.
+
+If you went to the pre-mixer, your laptop is already checked and this goes faster. Times, where mentioned, are the typical picture, not a rule — your organizer's `hackathon/event.md` and the freeze call are what count.
 
 ## What "done" is
 

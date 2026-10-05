@@ -27,14 +27,15 @@ When `mostly_new_to_code` is true, this is the normal case, not an exception. So
 
 ## The clock
 
-`workshop_hours` in the event file is the whole workshop, not a guess for one build slice. `5-build` still must not estimate slice durations.
+`workshop_hours` in the event file is a planning estimate for the organizer, not a clock the room runs on. There is no hard time limit. Do not count down, do not rush a team that is making progress, and do not treat an estimate as a finish line. `5-build` still must not estimate slice durations.
 
-Use the clock only as a ceiling:
+Use the estimate only as a ceiling on scope:
 
 - Prefer the smaller proof of concept.
 - Skip optional discovery once the skill's readiness criteria are met.
-- If planning is still open late in the workshop, say so in one sentence and offer to draft now.
+- If planning is still open well past the estimate, say so in one sentence and offer to draft now.
 - Do not add features to fill unused time.
+- The one real deadline is the organizer's build freeze (`build_freeze_minutes` before the demo slot): when it is called, stop building, rehearse from `RUN.md`, and ship what runs.
 
 A longer hackathon weekend does not widen this project. This block produces a demoable proof of concept. Teams can keep hacking after `6-ship`.
 

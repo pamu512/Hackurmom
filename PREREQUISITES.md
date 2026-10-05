@@ -19,12 +19,12 @@ A chat box in a browser that cannot read this folder, edit files, and run comman
 
 ## The room
 
-- A block of `workshop_hours` (3 by default) where teams are not also at a ceremony.
+- A block of time — about `workshop_hours` (3 by default) for a typical team — where teams are not also at a ceremony. There is no hard limit; budget for teams that use more.
 - Power for every driver laptop.
-- Wifi that can reach that team's agent provider and `github.com` for the whole three hours. The agent needs that network. The demo does not have to survive wifi being off.
+- Wifi that can reach that team's agent provider and `github.com` for the whole event. The agent needs that network. The demo does not have to survive wifi being off.
 - A USB stick with this folder already on it. Do not depend on cloning at the start.
 - A projector or a shared screen with [hackathon/room.html](hackathon/room.html), if you have one. The workshop runs without it.
-- Mentors who have read the card in [ORGANIZER.md](ORGANIZER.md). They walk the room around minute 40 and minute 90.
+- Mentors who have read the card in [ORGANIZER.md](ORGANIZER.md). They walk the room by signal — a team stuck on early milestones while others build, or a team gone quiet — not by the clock.
 
 If the campus already has a site license, use it. Do not buy a second vendor for this workshop, and do not require every team to use the same one.
 
@@ -33,7 +33,7 @@ If the campus already has a site license, use it. Do not buy a second vendor for
 Do this the day before, on the account the student will actually use. An installed agent that nobody is signed in to is not ready.
 
 1. **A coding agent with this folder as its workspace.** It must be able to read `AGENTS.md` and `skills/*/SKILL.md`, create and edit files, and run terminal commands, including git. Send one real message and confirm it can create a file. Delete that file afterward. If the account hits a usage wall on that message, it will hit it at minute 5 of the workshop.
-2. **Git on `PATH`.** `git --version` prints a version. On Windows, install Git for Windows so the terminal the agent uses can see it. `5-build` stops if git is missing.
+2. **Git on `PATH`.** `git --version` prints a version. On Windows, install Git for Windows so the terminal the agent uses can see it. `5-build` stops if git is missing. On Windows, also enable Developer Mode (or set `git config --global core.symlinks true`) before getting this folder, so the `.cursor/skills` links survive — without them the workshop still runs through `AGENTS.md`.
 3. **A commit identity.**
    ```
    git config --global user.name
@@ -50,13 +50,14 @@ Speech-to-text is optional. The scope skill asks for it because a spoken brain d
 
 One person per team, and it can be the driver.
 
-- A GitHub account that can create a **public** repository. Create it before the event. Password resets during hour two are how demos die.
+- A GitHub account that can create a **public** repository. Create it before the event. Password resets mid-build are how demos die.
 - Push already works from this laptop. Sign in once (SSH key or HTTPS) and prove it with a push to a test repo. Do not try the first login during `6-ship`.
 - They know the repo will be public, including history. `devpost/floor.md` and `devpost/learner-profile.md` are gitignored because they contain names. That does not make the agent chat private.
 
 ## Organizer, the day before
 
-- Replace the placeholders in [hackathon/event.md](hackathon/event.md). If you change the clock or the demo length, change [hackathon/room.html](hackathon/room.html) too.
+- Run the pre-mixer ([hackathon/mixer.md](hackathon/mixer.md)) if you are doing one: laptop checks, GitHub accounts and a first push, and teams saying their idea out loud once. It is the cheapest way to protect event-day momentum.
+- Replace the placeholders in [hackathon/event.md](hackathon/event.md). If you change the demo length, change the judging line on [hackathon/room.html](hackathon/room.html) too. The board runs on milestones, so pacing changes need no projector edit.
 - Run `python3 hackathon/check.py`. It should print `hackathon floor ok`.
 - Copy the folder to the USB stick after that edit, so every machine has the same finish line.
 - Do not send teams through `npx skills add`. That copies skills into an empty project and leaves `hackathon/event.md` behind. Node is only for that optional path.

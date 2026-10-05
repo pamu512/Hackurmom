@@ -10,3 +10,4 @@ This folder is a college-hackathon edition of Devpost Learn's Build With AI: Bas
 - When `hackathon/event.md` exists, follow `skills/hackathon-floor.md`.
 - The team makes product decisions. Do not draft their pitch, project name, or submission.
 - Curriculum files (`skills/`, `hackathon/`, `START.md`, `ORGANIZER.md`, `README.md`) are supposed to be here.
+- Windows note: `.cursor/skills` entries are symlinks. Clone with Developer Mode enabled or `git config --global core.symlinks true`; otherwise Cursor falls back to `AGENTS.md` and the `.cursor/rules` rule above, which is enough for the workshop to run.

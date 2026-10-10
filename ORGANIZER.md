@@ -1,6 +1,6 @@
 # Organizer guide
 
-A workshop inside a college hackathon. Teams leave with a proof of concept they can demo live, a plan they approved, and a public repo. They do not leave with a startup. There is no hard time limit: teams work at their own pace toward the milestones, and the room's only deadline is the build freeze before the demo slot. For the default pacing picture (most teams finish in about `workshop_hours`), keep the estimate in [hackathon/event.md](hackathon/event.md) — as an estimate, never a countdown.
+A workshop inside a college hackathon. Teams leave with a proof of concept they can demo live, a plan they approved, and a public repo. They do not leave with a startup. There is no hard time limit: teams work at their own pace toward the milestones, and the room's only deadline is the build freeze before the demo slot. For the default pacing picture (most teams finish in about `workshop_hours`), keep the estimate in [hackathon/event.md](hackathon/event.md), as an estimate, never a countdown.
 
 The setup that has to be true before doors open is [PREREQUISITES.md](PREREQUISITES.md). Edit [hackathon/event.md](hackathon/event.md) before you print anything. Then open [hackathon/room.html](hackathon/room.html) on the projector. The board runs on milestones, so it matches any pace; if you change the demo slot length, update the judging line on that page too.
 
@@ -24,7 +24,7 @@ You do not need Node unless someone insists on `npx skills add`. That path drops
 
 ## Milestones, not a countdown
 
-Most teams need about `workshop_hours` of active work. That number is a planning estimate for you, not a clock the room runs on. Do not post countdowns and do not hurry a team that is moving. Your lever is the milestone list below: when a team is stuck on one, help them clear it; when a team is ahead, let them polish or deepen — do not hand them a second feature.
+Most teams need about `workshop_hours` of active work. That number is a planning estimate for you, not a clock the room runs on. Do not post countdowns and do not hurry a team that is moving. Your lever is the milestone list below: when a team is stuck on one, help them clear it; when a team is ahead, let them polish or deepen. Do not hand them a second feature.
 
 | # | Milestone | A team has it when… |
 |---|---|---|
@@ -37,7 +37,7 @@ Most teams need about `workshop_hours` of active work. That number is a planning
 
 ## The build freeze
 
-`build_freeze_minutes` (default 25) before the demo slot is the one deadline you enforce: all building stops, every team rehearses from `RUN.md`, and the driver practices the demo words out loud. Announce it out loud — twice, once as a warning — and hold the line even if the last slice is thin. A rehearsed kernel beats an unfinished second feature.
+`build_freeze_minutes` (default 25) before the demo slot is the one deadline you enforce: all building stops, every team rehearses from `RUN.md`, and the driver practices the demo words out loud. Announce it out loud (twice, once as a warning) and hold the line even if the last slice is thin. A rehearsed kernel beats an unfinished second feature.
 
 ## Judging
 
@@ -56,7 +56,7 @@ Use these when a team is stuck. Do not take the keyboard except to recover a mac
 | What you see | What you say |
 |---|---|
 | The agent is writing the idea | "Pause. What do you want a judge to see? Tell the agent that, in your words." |
-| The agent asked them to pick a language or framework | "Stop. One web page, opened in the browser. You write the code. They click it." |
+| The agent asked them to pick a language or framework | "Stop. One web page, opened in the browser. The agent writes the code. You click it." |
 | They are staring at the terminal | "Close that. The agent runs the commands. You look at the page." |
 | They think they are behind because they cannot code | "You are not the coder today. Your job is the idea and the clicks." |
 | Scope is a whole product | "What is the one interaction? Everything else is later." Point them at `devpost/scope.md` section **Explicitly Cut**. |

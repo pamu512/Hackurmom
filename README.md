@@ -1,16 +1,16 @@
 # hackurmom
 
-A campus workshop for planning and building a small AI-assisted proof of concept before you demo it. A team finishes inside one room: one laptop, a live demo on that laptop, and no hard time limit — the room runs on milestones and a build freeze before the demo slot. Most people in the room have never written code. They decide what it does and try it in the browser. The agent writes the code.
+A campus workshop for planning and building a small AI-assisted proof of concept before you demo it. A team finishes inside one room: one laptop, a live demo on that laptop, and no hard time limit: the room runs on milestones and a build freeze before the demo slot. Most people in the room have never written code. They decide what it does and try it in the browser. The agent writes the code.
 
 Students: read [START.md](START.md), open this folder in any coding agent, and type **Start the hackathon**.
 
-Organizers: read [PREREQUISITES.md](PREREQUISITES.md) and [ORGANIZER.md](ORGANIZER.md), then edit [hackathon/event.md](hackathon/event.md) before doors open — and consider running the pre-mixer in [hackathon/mixer.md](hackathon/mixer.md) the week before. Project the room board at [hackathon/room.html](hackathon/room.html).
+Organizers: read [PREREQUISITES.md](PREREQUISITES.md) and [ORGANIZER.md](ORGANIZER.md), then edit [hackathon/event.md](hackathon/event.md) before doors open, and consider running the pre-mixer in [hackathon/mixer.md](hackathon/mixer.md) the week before. Project the room board at [hackathon/room.html](hackathon/room.html).
 
 ## What a team leaves with
 
 - A working proof of concept, not a product
-- `devpost/scope.md`, `prd.md`, `spec.md`, and `checklist.md` — the plan they actually approved
-- `RUN.md` — how a judge starts the demo
+- `devpost/scope.md`, `prd.md`, `spec.md`, and `checklist.md`: the plan they actually approved
+- `RUN.md`: how a judge starts the demo
 - A public GitHub repository
 - A rehearsed live demo (300 seconds at HKUST; `demo_seconds` in `hackathon/event.md` is the slot)
 
@@ -42,7 +42,7 @@ What has to be installed and signed in beforehand is [PREREQUISITES.md](PREREQUI
 2. Open the folder in the agent and start a conversation that is allowed to edit files and run commands.
 3. Type: `Start the hackathon`
 
-`AGENTS.md` points every agent at `skills/`. `CLAUDE.md` is the same file for Claude Code. `.cursor/rules` and `.cursor/skills` are there for Cursor, and nothing else depends on them. On Windows, enable Developer Mode — or set `git config --global core.symlinks true` — before cloning, so those Cursor links survive; and run the check as `python hackathon/check.py`.
+`AGENTS.md` points every agent at `skills/`. `CLAUDE.md` is the same file for Claude Code. `.cursor/rules` and `.cursor/skills` are there for Cursor, and nothing else depends on them. On Windows, enable Developer Mode (or set `git config --global core.symlinks true`) before cloning, so those Cursor links survive; and run the check as `python hackathon/check.py`.
 
 Personal names stay in `devpost/floor.md` and `devpost/learner-profile.md`, which are gitignored. That does not make the chat private. Before the repo goes public, look for secrets anyway.
 
@@ -79,7 +79,7 @@ hackathon/room.html             projector board
 
 ## License
 
-The curriculum in this repository (the `skills/` directory, `hackathon/`, and the guides) is licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see [LICENSE](LICENSE). A team's project files built during the workshop belong to that team.
+The curriculum in this repository (the `skills/` directory, `hackathon/`, and the guides) is licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [LICENSE](LICENSE). A team's project files built during the workshop belong to that team.
 
 ## Check
 

@@ -3,7 +3,7 @@ name: 0-floor
 description: "Start a local college hackathon using this curriculum. Confirm who is in the room, the workshop clock, and today's finish line, then hand off to 1-start. Run this before 1-start when hackathon/event.md exists."
 ---
 
-# 0-floor — Who's Here, and What Done Means Today
+# 0-floor: Who's Here, and What Done Means Today
 
 You are the floor lead for a college hackathon workshop. This is a two-minute check, not another planning interview. Get the team, the clock, and the finish line onto paper, then start `1-start`.
 
@@ -29,7 +29,7 @@ Do this before the questions on a first visit. The team should be in the worksho
 
 Ignore curriculum material: dotfiles, `skills/`, `devpost/`, `hackathon/`, `.cursor/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, and `.gitignore`.
 
-If you see an unrelated project, say: "This folder looks like it already has another project in it. This works best in the workshop folder your organizer gave you — I'd stop here and open that, so nothing gets tangled up." Then stop. Never offer to move to a different folder.
+If you see an unrelated project, say: "This folder looks like it already has another project in it. This works best in the workshop folder your organizer gave you. I'd stop here and open that, so nothing gets tangled up." Then stop. Never offer to move to a different folder.
 
 ## The Two Questions
 

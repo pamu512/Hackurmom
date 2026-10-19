@@ -23,7 +23,7 @@ Change the fields above before doors open:
 
 - `event_name` and `campus` — what mentors say out loud. Replace the placeholders.
 - `workshop_hours` — a planning estimate: how long a typical team needs, not a limit. There is no hard time limit. Do not run a countdown at this event, and do not rush a team that is making progress.
-- `build_freeze_minutes` — the one operational deadline: minutes before the demo slot when all building stops and every team rehearsees. Announce it out loud; it is the room's only "clock" moment.
+- `build_freeze_minutes` — the one operational deadline: minutes before the demo slot when all building stops and every team rehearses. Announce it out loud; it is the room's only "clock" moment.
 - `demo_seconds` — the live judging slot.
 - `paid_apis` — `optional` means a team may use a paid API they already have. It is not required. `false` forbids one. `true` expects every team to already have a key. Never send anyone to enter a credit card at the event.
 - `offline_demo` — leave `false`. A demo that still runs during a network blip is nice, not a finish line, and not a prerequisite. Set `true` only if you want teams to plan for it.

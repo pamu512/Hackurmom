@@ -65,7 +65,7 @@ Surface the few consequential edge cases that apply: first use, an obvious error
 
 ### 5. Guard the boundary
 
-Catch growth. Every time a requirement pushes past what fits in 2–4 hours of active work and a demo, name it: "This is getting bigger than the proof of concept. How does it help prove the core idea, and what would you leave out to make room?" Sort into **what we're building** and **deferred**. Keep the submission in mind — a behavior that can't be shown in a minute on a screen or in a short video is a weak candidate for *now*.
+Catch growth. Every time a requirement pushes past what fits in 2–4 hours of active work and a demo, name it: "This is getting bigger than the proof of concept. How does it help prove the core idea, and what would you leave out to make room?" Sort into **what we're building** and **deferred**. Keep the submission in mind — a behavior that can't be shown in about a minute on a screen is a weak candidate for *now*; on the original track, that screen may be a short demo video.
 
 ## Explore More or Review
 

@@ -72,6 +72,59 @@ def main() -> None:
                 failures.append(f"hackathon/event.md missing {key}")
     settings = event_values(event or "")
 
+    # Placeholder and value sanity checks, so a mis-edited event file cannot
+    # silently change the room's finish line.
+    flags = {}
+    if event is not None:
+        for key, placeholder in (("event_name", "Campus Build With AI"), ("campus", "Your college")):
+            value = settings.get(key, "")
+            if value == "" or value == placeholder:
+                failures.append(f"{key} in hackathon/event.md is still the placeholder")
+
+        def flag(name):
+            value = settings.get(name)
+            if value is None:
+                return False  # missing keys are already reported above
+            if value.lower() not in ("true", "false"):
+                failures.append(f"{name} in hackathon/event.md must be true or false")
+                return False
+            return value.lower() == "true"
+
+        for name in (
+            "mostly_new_to_code",
+            "offline_demo",
+            "require_live_demo",
+            "require_public_github",
+            "require_video",
+        ):
+            flags[name] = flag(name)
+
+        if settings.get("paid_apis") not in ("true", "false", "optional", None):
+            failures.append("paid_apis in hackathon/event.md must be true, false, or optional")
+
+        for name in ("devpost_url", "discord_url"):
+            value = settings.get(name)
+            if value not in (None, "", "none") and not value.startswith(("http://", "https://")):
+                failures.append(f"{name} in hackathon/event.md must be a URL, 'none', or empty")
+
+        for name, whole in (
+            ("workshop_hours", False),
+            ("build_freeze_minutes", True),
+            ("demo_seconds", True),
+        ):
+            value = settings.get(name)
+            if value is None:
+                continue
+            try:
+                number = float(value)
+            except ValueError:
+                failures.append(f"{name} in hackathon/event.md must be a number")
+                continue
+            if number <= 0:
+                failures.append(f"{name} in hackathon/event.md must be positive")
+            if whole and number != int(number):
+                failures.append(f"{name} in hackathon/event.md must be a whole number")
+
     if not (ROOT / "skills" / "hackathon-floor.md").exists():
         failures.append("missing skills/hackathon-floor.md")
 
@@ -108,6 +161,18 @@ def main() -> None:
     ship = read(ROOT / "skills" / "6-ship" / "SKILL.md") or ""
     if "require_live_demo" not in ship:
         failures.append("6-ship does not follow the event file's live demo flag")
+    if "require_video" not in ship:
+        failures.append("6-ship does not follow the event file's video flag")
+
+    for name, rel in (
+        ("2-scope", "templates/scope-template.md"),
+        ("3-prd", "templates/prd-template.md"),
+        ("4-spec", "templates/spec-template.md"),
+        ("5-build", "templates/checklist-template.md"),
+    ):
+        text = read(ROOT / "skills" / name / rel) or ""
+        if "status: draft" not in text:
+            failures.append(f"skills/{name}/{rel} lost its status: draft frontmatter")
 
     ignore = read(ROOT / ".gitignore") or ""
     for path in ("/devpost/learner-profile.md", "/devpost/floor.md"):
@@ -126,12 +191,31 @@ def main() -> None:
     seconds = settings.get("demo_seconds", "")
     if seconds and f"{seconds} second" not in room:
         failures.append(f"room board does not match demo_seconds ({seconds})")
+    span = re.search(r'data-demo-seconds="(\d+)"', room)
+    if not span:
+        failures.append("room board is missing the data-demo-seconds span")
+    elif seconds and span.group(1) != seconds:
+        failures.append(
+            f"room board demo span ({span.group(1)}) does not match demo_seconds ({seconds})"
+        )
+    if flags.get("require_live_demo") and 'data-flag-live-demo="yes"' not in room:
+        failures.append("room board is missing the live-demo finish line (require_live_demo is true)")
+    if flags.get("require_public_github") and 'data-flag-public-github="yes"' not in room:
+        failures.append(
+            "room board is missing the public-GitHub finish line (require_public_github is true)"
+        )
+    if flags.get("require_video") and 'data-flag-video="yes"' not in room:
+        failures.append("room board is missing the video finish line (require_video is true)")
+    if flags.get("require_video") is False and 'data-flag-video="yes"' in room:
+        failures.append("room board lists a video finish line but require_video is false")
     if not (ROOT / "hackathon" / "mixer.md").exists():
         failures.append("missing hackathon/mixer.md (pre-mixer guide)")
 
     agents = read(ROOT / "AGENTS.md") or ""
     if "skills/0-floor/SKILL.md" not in agents or "hackathon/event.md" not in agents:
         failures.append("AGENTS.md no longer routes agents into the skills")
+    if "1-start" not in agents or "6-ship" not in agents:
+        failures.append("AGENTS.md no longer routes the full skill chain")
     claude = read(ROOT / "CLAUDE.md") or ""
     if claude != agents:
         failures.append("CLAUDE.md differs from AGENTS.md")

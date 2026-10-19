@@ -120,10 +120,9 @@ Not exhaustive error handling. The two or three places this will actually break 
 
 ## How Another Person Tries It
 
-This is the durable version of "demo readiness," and it drives real architecture decisions.
-Submission requires a short demo video and a public GitHub repository. Reviewers should not need to clone the repo to see the proof.
-- **Local app + recording:** sufficient; document startup and what to show, then upload the recording and check access.
-- **Optional deployed URL:** lets others try it directly in addition to the required video and repository; record any chosen hosting target, setup, costs, and deploy steps.
+This is the durable version of "demo readiness," and it drives real architecture decisions. What counts as the proof comes from the event settings, not from this page: when `hackathon/event.md` exists, the proof is the live demo on this laptop started from `RUN.md`, and a video matters only when `require_video` is true. On the original track, submission requires a short demo video and a public GitHub repository; reviewers should not need to clone the repo to see the proof.
+- **Local app:** on the college floor, document startup and what to show. On the original track, record it, upload the recording, and check access.
+- **Optional deployed URL:** lets others try it directly, in addition to the required proof; record any chosen hosting target, setup, costs, and deploy steps.
 
 Explain hosting tradeoffs only if relevant and record the learner's choice. They can change optional deployment plans in `6-ship`; keep the architecture proportional to the proof.
 

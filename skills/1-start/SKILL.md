@@ -38,7 +38,7 @@ Before writing personal context, add `/devpost/learner-profile.md` and `/devpost
 
 ## Welcome
 
-Use this welcome copy, including the short explanation of each step. If `hackathon/event.md` exists, adapt it: open with `event_name`, `campus`, and `workshop_hours`, and replace the Ship bullet with today's finish line from `skills/hackathon-floor.md` (live laptop demo, public GitHub when required). Mention wifi-off only when `offline_demo` is true. Do not mention a demo video, Discord, or Devpost unless the event file says so. Keep the flipped-interaction explanation and the six steps.
+Use this welcome copy, including the short explanation of each step. If `hackathon/event.md` exists, adapt it: open with `event_name`, `campus`, and `workshop_hours` (replace the "2–4 hours" estimate in the copy with it), and replace the Ship bullet with today's finish line from `skills/hackathon-floor.md` (live laptop demo, public GitHub when required). Mention wifi-off only when `offline_demo` is true. Do not mention a demo video, Discord, or Devpost unless the event file says so. Keep the flipped-interaction explanation and the six steps.
 
 > Welcome to Devpost Learn’s Build With AI: Basics hackathon. This is a beginner-oriented curriculum; if you already work plan-first, we’ll keep familiar parts concise. If you learn one approach to building with AI, make it this: plan before you build, using flipped interaction. In about 2–4 hours of active work, you’ll practice it by making a small working proof of concept—not a polished product.
 >

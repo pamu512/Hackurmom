@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hackurmom — the workshop flow · 60-second demo</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --border:#30363d; --txt:#e6edf3; --dim:#8b949e;
+    --green:#3fb950; --blue:#58a6ff; --cyan:#79c0ff; --yel:#d29922; --prp:#bc8cff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{background:var(--bg); color:var(--txt); font-family:'Menlo','SF Mono', Consolas, monospace;
+       min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:28px 16px}
+  header{max-width:860px; width:100%; margin-bottom:18px}
+  h1{font-size:20px; letter-spacing:.5px}
+  h1 .brand{color:var(--prp)}
+  .sub{color:var(--dim); font-size:13px; margin-top:6px; line-height:1.6}
+  .sub a{color:var(--cyan); text-decoration:none}
+  .terminal{max-width:860px; width:100%; background:var(--panel); border:1px solid var(--border);
+            border-radius:12px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.45)}
+  .chrome{display:flex; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid var(--border); position:relative}
+  .dot{width:12px; height:12px; border-radius:50%}
+  .r{background:#ff5f56}.y{background:#ffbd2e}.g{background:#27c93f}
+  .ttl{position:absolute; left:50%; transform:translateX(-50%); color:var(--dim); font-size:12.5px}
+  .screen{padding:22px 26px; min-height:340px; font-size:14.5px; line-height:1.75}
+  .ln{white-space:pre-wrap; word-break:break-word}
+  .gap{height:12px}
+  .pr{color:var(--prp)} .bl{color:var(--blue)} .cy{color:var(--cyan)} .yl{color:var(--yel)}
+  .gr{color:var(--green)} .dm{color:var(--dim)} .tx{color:var(--txt)}
+  .cursor{display:inline-block; width:8px; height:16px; background:var(--green);
+          vertical-align:-2px; animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .rail{height:6px; background:var(--border); border-radius:3px; margin:8px 26px 0; overflow:hidden}
+  .fill{height:100%; background:var(--green); width:0; transition:width .6s ease; border-radius:3px}
+  .rail-label{text-align:center; color:var(--dim); font-size:11.5px; padding:8px 0 14px; letter-spacing:.4px}
+  .controls{display:flex; gap:10px; margin:16px 0 8px; flex-wrap:wrap}
+  button{font:inherit; font-size:13px; background:var(--panel); color:var(--txt);
+         border:1px solid var(--border); border-radius:8px; padding:8px 16px; cursor:pointer}
+  button:hover{border-color:var(--blue); color:var(--blue)}
+  button.on{border-color:var(--green); color:var(--green)}
+  .steps{display:flex; gap:6px; flex-wrap:wrap; max-width:860px; width:100%; margin-top:6px}
+  .chip{font-size:11.5px; color:var(--dim); border:1px solid var(--border); border-radius:999px; padding:3px 10px; cursor:pointer}
+  .chip.on{color:var(--green); border-color:var(--green)}
+  footer{color:var(--dim); font-size:12px; margin-top:26px; line-height:1.8; text-align:center}
+  footer a{color:var(--cyan); text-decoration:none}
+  @media (max-width:640px){ .screen{font-size:12px; padding:16px} }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="brand">hackurmom</span> · the workshop flow</h1>
+  <p class="sub">One laptop. One team. No coding experience required — you decide what it does, the agent writes the code.
+  This is the whole flow in ~60 seconds. The real thing: <a href="https://github.com/pamu512/Hackurmom">github.com/pamu512/Hackurmom</a></p>
+</header>
+
+<div class="terminal">
+  <div class="chrome"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="ttl" id="title">hackurmom</span></div>
+  <div class="screen" id="screen"></div>
+  <div class="rail"><div class="fill" id="fill"></div></div>
+  <div class="rail-label" id="raillabel"></div>
+</div>
+
+<div class="controls">
+  <button id="playBtn" class="on">⏸ pause</button>
+  <button id="restartBtn">↺ replay</button>
+</div>
+<div class="steps" id="steps"></div>
+
+<footer>
+  grassroots · purely voluntary · for the love of code and AI · sponsors welcome (credits, APIs, GPU) — until then, mom offers a sandwich and OJ 🥪<br>
+  Next: meet the organisers at HKUST · Sat 14 Nov · 12:30 — then the <b>winter room</b>, first week of December
+</footer>
+
+<script>
+const BEATS = [
+ {title:'hackurmom — what this is', hold:2600, rail:null, lines:[
+   [],
+   [{t:'  hackurmom', c:'pr'}, {t:'  ·  AI Project Scoping and Execution', c:'tx'}],
+   [],
+   [{t:'  One laptop. One team. No coding experience required.', c:'dm'}],
+   [{t:'  You decide what it does — the agent writes the code.', c:'dm'}],
+   [],
+   [{t:'  This is the whole flow, in one minute.', c:'tx'}]]},
+ {title:'step 0 · get the repo', hold:2800, rail:[1,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:'❯ ', c:'gr'}, {t:'git clone https://github.com/pamu512/Hackurmom', c:'tx'}],
+   [],
+   [{t:'  Cloning into ', c:'dm'}, {t:"'Hackurmom'", c:'bl'}, {t:'...', c:'dm'}],
+   [{t:'  ✓ skills/  hackathon/  README  START.md', c:'gr'}],
+   [],
+   [{t:'❯ ', c:'gr'}, {t:'open the folder in Cursor / Claude Code / Codex', c:'tx'}],
+   [{t:'  (any agent that can edit files and run commands)', c:'dm'}]]},
+ {title:'step 1 · floor — who is here, what are we building', hold:3000, rail:[2,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:'❯ ', c:'gr'}, {t:'Start the hackathon', c:'tx'}],
+   [],
+   [{t:' 🤖 hackurmom-agent', c:'bl'}],
+   [{t:'    Who is on the team today? And in one sentence —', c:'tx'}],
+   [{t:'    what do you want to build?', c:'tx'}],
+   [],
+   [{t:' 👥 team', c:'yl'}],
+   [{t:'    “A study-buddy app that quizzes us from our lecture PDFs.”', c:'tx'}]]},
+ {title:'step 2 · scope — five questions, non-goals included', hold:3000, rail:[3,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:' 🤖 hackurmom-agent', c:'bl'}],
+   [{t:'    Five scoping questions. First: what are we', c:'tx'}],
+   [{t:'    deliberately NOT building?', c:'tx'}],
+   [],
+   [{t:' 👥 team', c:'yl'}],
+   [{t:'    “No login. No cloud. Just upload a PDF and get quizzes.”', c:'tx'}],
+   [],
+   [{t:'    ✓ written to devpost/scope.md   status: draft', c:'gr'}]]},
+ {title:'steps 3–4 · prd + spec — the team approves the plan', hold:3200, rail:[5,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:' 🤖 hackurmom-agent', c:'bl'}],
+   [{t:'    PRD locked: 2 screens, 3 edge cases, no code talk.', c:'tx'}],
+   [{t:'    Spec locked: single HTML file + pdf.js, tests first.', c:'tx'}],
+   [],
+   [{t:'    Here is the plan. “Looks good” approves it.', c:'tx'}],
+   [],
+   [{t:' 👥 team', c:'yl'}, {t:'    “Looks good.”', c:'gr'}],
+   [],
+   [{t:'    ✓ devpost/prd.md · devpost/spec.md   status: approved', c:'gr'}]]},
+ {title:'step 5 · build — one verified slice at a time', hold:3200, rail:[6,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:' 🤖 hackurmom-agent', c:'bl'}],
+   [{t:'    Slice 1: drop a PDF, list its pages on screen.', c:'tx'}],
+   [],
+   [{t:'    ⋯ agent writes quiz.html + a failing test ⋯', c:'dm'}],
+   [{t:'    ✓ test 1/1 passing   ·   diff: +84 lines', c:'gr'}],
+   [{t:'    👥 team reads the diff — “ship slice 1” ', c:'yl'}],
+   [{t:'    ✓ committed  a1f9c3e', c:'gr'}],
+   [],
+   [{t:'    build freeze at 16:30 · demo at 17:00', c:'dm'}]]},
+ {title:'step 6 · ship — demo, publish, done', hold:3400, rail:[7,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [{t:' 🤖 hackurmom-agent', c:'bl'}],
+   [{t:'    RUN.md written — how a judge starts the demo.', c:'tx'}],
+   [{t:'    Repo published. Demo: 300 seconds. Ready.', c:'tx'}],
+   [],
+   [{t:' 🏁 what the team leaves with', c:'pr'}],
+   [{t:'    ✓ a working proof of concept', c:'gr'}],
+   [{t:'    ✓ scope · prd · spec · checklist — the plan they approved', c:'gr'}],
+   [{t:'    ✓ a public repo · a rehearsed demo', c:'gr'}]]},
+ {title:'hackurmom — winter ’26 · first week of december', hold:3200, rail:[7,'floor · start · scope · prd · spec · build · ship'], lines:[
+   [],
+   [{t:'  Starting is cheap.', c:'tx'}, {t:'  Finishing is the project.', c:'pr'}],
+   [],
+   [{t:'  Most people in that room had never written code.', c:'dm'}],
+   [{t:'  Come be one of them. 🐣', c:'dm'}],
+   [],
+   [{t:'  → github.com/pamu512/Hackurmom', c:'cy'}],
+   [{t:'  → type ', c:'dm'}, {t:'Start the hackathon', c:'tx'}]]}
+];
+
+const screen=document.getElementById('screen'), title=document.getElementById('title'),
+      fill=document.getElementById('fill'), raillabel=document.getElementById('raillabel'),
+      steps=document.getElementById('steps'), playBtn=document.getElementById('playBtn');
+
+let idx=0, playing=true, typing=null, holdTimer=null;
+
+function renderBeat(i, instant=false){
+  const b=BEATS[i];
+  title.textContent=b.title;
+  screen.innerHTML='';
+  if(b.rail){ fill.style.width=(b.rail[0]/7*100)+'%'; raillabel.textContent=b.rail[1]; }
+  else { fill.style.width='0%'; raillabel.textContent=''; }
+  const lines=[...b.lines];
+  let li=0;
+  function nextLine(){
+    if(li>=lines.length){ screen.insertAdjacentHTML('beforeend','<span class="cursor"></span>'); return; }
+    const segs=lines[li++];
+    if(!segs.length){ screen.insertAdjacentHTML('beforeend','<div class="gap"></div>'); nextLine(); return; }
+    const div=document.createElement('div'); div.className='ln';
+    let si=0;
+    function nextSeg(){
+      if(si>=segs.length){ setTimeout(nextLine, instant?0:90); return; }
+      const s=segs[si++];
+      const span=document.createElement('span'); span.className=s.c; div.appendChild(span);
+      let ci=0;
+      (function typeChar(){
+        if(ci<s.t.length){ span.textContent+=s.t[ci++]; typing=setTimeout(typeChar, instant?0:14); }
+        else { nextSeg(); }
+      })();
+    }
+    screen.appendChild(div); nextSeg();
+  }
+  nextLine();
+}
+
+function show(i){
+  clearTimeout(typing); clearTimeout(holdTimer);
+  idx=i; renderBeat(i);
+  document.querySelectorAll('.chip').forEach((c,j)=>c.classList.toggle('on', j===i));
+  if(playing) holdTimer=setTimeout(()=>show((i+1)%BEATS.length), BEATS[i].hold+1800);
+}
+
+BEATS.forEach((b,i)=>{
+  const chip=document.createElement('span'); chip.className='chip'; chip.textContent=b.title.split('·')[0].trim();
+  chip.onclick=()=>show(i); steps.appendChild(chip);
+});
+
+playBtn.onclick=()=>{ playing=!playing; playBtn.textContent=playing?'⏸ pause':'▶ play'; playBtn.classList.toggle('on',playing);
+  if(playing) holdTimer=setTimeout(()=>show((idx+1)%BEATS.length), 800); else clearTimeout(holdTimer); };
+document.getElementById('restartBtn').onclick=()=>{ playing=true; playBtn.textContent='⏸ pause'; playBtn.classList.add('on'); show(0); };
+
+show(0);
+</script>
+</body>
+</html>

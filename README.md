@@ -6,6 +6,12 @@ Students: read [START.md](START.md), open this folder in any coding agent, and t
 
 Organizers: read [PREREQUISITES.md](PREREQUISITES.md) and [ORGANIZER.md](ORGANIZER.md), then edit [hackathon/event.md](hackathon/event.md) before doors open — and consider running the pre-mixer in [hackathon/mixer.md](hackathon/mixer.md) the week before. Project the room board at [hackathon/room.html](hackathon/room.html).
 
+### The flow in 60 seconds
+
+[![hackurmom workshop flow](demo/hackurmom-demo.gif)](demo/hackurmom-demo.html)
+
+*Animated walkthrough — clone, open in an agent, `Start the hackathon`, floor → scope → PRD → spec → build → ship. Full-size interactive version: [demo/hackurmom-demo.html](demo/hackurmom-demo.html) · video: [demo/hackurmom-demo.mp4](demo/hackurmom-demo.mp4)*
+
 ## What a team leaves with
 
 - A working proof of concept, not a product

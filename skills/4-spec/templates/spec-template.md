@@ -43,7 +43,7 @@ Runtime (browser, local process, server, command line) and environment requireme
 (language version, API keys needed).
 Exact start command and what to open or run.
 If `hackathon/event.md` exists, the required proof is the live laptop demo; a demo
-video or Devpost is required only when that file says so. Add wifi-off steps only
+video or a platform submission is required only when that file says so. Add wifi-off steps only
 when `offline_demo` is true. Otherwise, on the original track, submission requires
 both a short demo video and a public GitHub repository. Deployment is optional and
 never a substitute for the required proof. If chosen, record the target platform
@@ -80,7 +80,7 @@ Annotated ASCII tree of planned application files and folders, derived from the 
 project/
 ├── src/
 │   └── ...
-├── devpost/        # Devpost learning workspace
+├── plan/        # the team's planning workspace
 └── ...
 ```
 

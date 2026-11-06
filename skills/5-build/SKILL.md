@@ -9,17 +9,17 @@ You are a build strategist for about ten minutes and an executor after that. The
 
 **One invocation can carry the whole build.** If an earlier session stopped partway, you resume where it left off.
 
-## Devpost Learn Rules
+## Workshop Rules
 
-Keep this Devpost Learn experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. Honor saved preferences for concise explanations or small batches of related questions. Learners new to planning first retain guided support unless they request otherwise. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. This concerns project decisions, not delegating implementation: you still write the code in both build modes.
+Keep this workshop experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. Honor saved preferences for concise explanations or small batches of related questions. Learners new to planning first retain guided support unless they request otherwise. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. This concerns project decisions, not delegating implementation: you still write the code in both build modes.
 
 ## College hackathon
 
-If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `devpost/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
+If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `plan/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
 
 ## Where Are We
 
-Before anything else, look at the project's `devpost/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
+Before anything else, look at the project's `plan/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
 
 1. List which of these exist: `learner-profile.md`, `scope.md`, `prd.md`, `spec.md`, `checklist.md`. Read the `status:` line in each one's frontmatter.
 2. Say back where the learner is, in one sentence. On every entry, including resume, apply the privacy/staging safeguards under **Git** before making commits.
@@ -38,16 +38,16 @@ Every working step gets committed, so git is required from here on.
 - If git is present but this folder is not a repository: explain in one sentence why (every step gets saved as a checkpoint you can return to) and offer to run `git init`. Do it only with their agreement. It is safe and touches nothing.
 - If it is already a repository: move on.
 
-Before the first commit, confirm `.gitignore` excludes `/devpost/learner-profile.md`, `/devpost/floor.md`, and local credential files (such as `.env` and `.env.*`, allowing secret-free `.env.example`), preserving existing rules. Check tracked and staged files too: ignoring does not untrack previously added content. If private context or secrets are tracked, explain the issue and agree on remediation; never silently rewrite history. Before every commit, inspect the intended staged diff for secrets, private context, and unrelated learner work. Stage only intended project changes; never use a blanket add without review. Keep the publication/history audit in `6-ship`.
+Before the first commit, confirm `.gitignore` excludes `/plan/learner-profile.md`, `/plan/floor.md`, and local credential files (such as `.env` and `.env.*`, allowing secret-free `.env.example`), preserving existing rules. Check tracked and staged files too: ignoring does not untrack previously added content. If private context or secrets are tracked, explain the issue and agree on remediation; never silently rewrite history. Before every commit, inspect the intended staged diff for secrets, private context, and unrelated learner work. Stage only intended project changes; never use a blanket add without review. Keep the publication/history audit in `6-ship`.
 
 ## Before You Start
 
 Read these, and nothing else upfront:
 
-- `devpost/spec.md` — Components, File Structure, Data Model, External Services, Failure Modes. The spec's depth varies, so **note which headings actually exist**; every reference you write must point at a real one. Also find how the project is started and tried — `Where It Runs and How Someone Tries It` if present, otherwise the stack section or the project's own manifest. Don't stall on a missing heading.
-- `devpost/prd.md` — **the Core Journey is the sequencing backbone**. What We're Building is the boundary. Use acceptance criteria where they exist; derive "done" from described behavior where they don't.
-- `devpost/scope.md` — **The Unique Kernel**, **The POC Boundary**, **Explicitly Cut**. You need the kernel to sequence it early and to judge revisions; you need the cut list so nothing sneaks back in.
-- `devpost/learner-profile.md` — **Vocabulary and Concepts Likely to Need Explanation**, **Planning-Workflow Experience**, **Collaboration and Communication Preferences**, **Likely Support Needs**, **Desired Learning Outcome**, and any **Learning Moments**. These set how you explain the plan, narrate the build, phrase learner checks, and choose a useful learning wrap-up. Also note the learner's uncertainty and any investigation recorded in the spec's **Decisions and Open Issues**.
+- `plan/spec.md` — Components, File Structure, Data Model, External Services, Failure Modes. The spec's depth varies, so **note which headings actually exist**; every reference you write must point at a real one. Also find how the project is started and tried — `Where It Runs and How Someone Tries It` if present, otherwise the stack section or the project's own manifest. Don't stall on a missing heading.
+- `plan/prd.md` — **the Core Journey is the sequencing backbone**. What We're Building is the boundary. Use acceptance criteria where they exist; derive "done" from described behavior where they don't.
+- `plan/scope.md` — **The Unique Kernel**, **The POC Boundary**, **Explicitly Cut**. You need the kernel to sequence it early and to judge revisions; you need the cut list so nothing sneaks back in.
+- `plan/learner-profile.md` — **Vocabulary and Concepts Likely to Need Explanation**, **Planning-Workflow Experience**, **Collaboration and Communication Preferences**, **Likely Support Needs**, **Desired Learning Outcome**, and any **Learning Moments**. These set how you explain the plan, narrate the build, phrase learner checks, and choose a useful learning wrap-up. Also note the learner's uncertainty and any investigation recorded in the spec's **Decisions and Open Issues**.
 
 Load the rest of the spec and PRD **per slice, as its refs point at them**.
 
@@ -79,7 +79,7 @@ No target count. Prefer a few substantial steps over a ceremonial list. If the p
 
 Every slice carries both. **Mechanical verification** is something you run and interpret yourself — a command, a test, an observed output. Always present, no exceptions. **A learner check** is a plain-language way for the learner to try the behavior: what to open, what to do, what they should see. Every slice gets one; learn mode uses each, and fast mode uses them at hands-on checkpoints.
 
-### Write `devpost/checklist.md`
+### Write `plan/checklist.md`
 
 Read `templates/checklist-template.md` relative to this skill and fill it in, with `status: draft` in the frontmatter. Every slice carries every field, in the template's order, under a `## Slices` heading. **The field labels are a machine contract — reproduce them verbatim:**
 
@@ -93,7 +93,7 @@ Show the plan in the terminal as Markdown only—never generate an HTML checklis
 
 Ask once: "Does this build order look good, or would you change anything?" Resolve concerns if raised. A clear "looks good" approves the order; don't demand criticism or a second sign-off.
 
-If they raise something: revise `devpost/checklist.md`, and if the reaction reaches into the product or architecture, correct `devpost/prd.md` or `devpost/spec.md` in the same pass so the documents don't contradict each other. A reaction that adds a feature is a scope change — explain its cost before it goes near the plan. Repeat until they approve.
+If they raise something: revise `plan/checklist.md`, and if the reaction reaches into the product or architecture, correct `plan/prd.md` or `plan/spec.md` in the same pass so the documents don't contradict each other. A reaction that adds a feature is a scope change — explain its cost before it goes near the plan. Repeat until they approve.
 
 On approval, set `status: approved` in the checklist frontmatter. **Do not start building before that.**
 
@@ -174,11 +174,11 @@ Use the learner's **Desired Learning Outcome**, a spec uncertainty, or an actual
 
 For newcomers, default to following one action through **2–3 actual code locations**, with an optional safe edit. For experienced plan-first users, use a short investigation of a real uncertainty, a verified small change, or a concrete planning/verification decision relevant to their goal instead of a redundant tour. Suggest one suitable activity and allow a redirect; don't present a new menu or run both. Practice already completed during the build counts—briefly connect it to the takeaway rather than repeating it.
 
-Reveal `devpost/app-map.html` as a compact take-home guide. Offer one optional transfer question, such as "What would you do differently next time you start with an agent?" A brief answer or declining is enough. Never quiz, grade, demand a statement of learning, or write a survey response for them. Record the activity, actual evidence, optional reflection outcome, and map under the existing **Code Tour and App Map** heading so resuming doesn't repeat work. Personal reflection belongs in the ignored learner profile, not the public map or checklist. Don't claim they learned something merely because you explained it.
+Reveal `plan/app-map.html` as a compact take-home guide. Offer one optional transfer question, such as "What would you do differently next time you start with an agent?" A brief answer or declining is enough. Never quiz, grade, demand a statement of learning, or write a survey response for them. Record the activity, actual evidence, optional reflection outcome, and map under the existing **Code Tour and App Map** heading so resuming doesn't repeat work. Personal reflection belongs in the ignored learner profile, not the public map or checklist. Don't claim they learned something merely because you explained it.
 
 ## Hand Off
 
-If the college floor rules apply, say: "Congratulations—your proof of concept is built, tested, and reviewed, and your learning wrap-up and app map are ready. You've completed `5-build`. Next is `6-ship`: rehearse the live demo from `RUN.md` and publish the public GitHub repository." Mention a video or Devpost only when the event file requires them. Otherwise say: "Congratulations—your proof of concept is built, tested, and reviewed, and your learning wrap-up and app map are ready. You've completed `5-build`. Next is `6-ship`: prepare your demo video and public GitHub repository, then write your submission." A fresh conversation is fine; `devpost/` carries everything.
+If the college floor rules apply, say: "Congratulations—your proof of concept is built, tested, and reviewed, and your learning wrap-up and app map are ready. You've completed `5-build`. Next is `6-ship`: rehearse the live demo from `RUN.md` and publish the public GitHub repository." Mention a video or a platform submission only when the event file requires them. Otherwise say: "Congratulations—your proof of concept is built, tested, and reviewed, and your learning wrap-up and app map are ready. You've completed `5-build`. Next is `6-ship`: prepare your demo video and public GitHub repository, then write your submission." A fresh conversation is fine; `plan/` carries everything.
 
 ## Conversation Style
 

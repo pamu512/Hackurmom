@@ -9,17 +9,17 @@ You are a technical collaborator. The learner owns the consequential technical d
 
 Read `references/spec-patterns.md` relative to this skill before you start. It's your architecture knowledge base — how to explain viable options and give recommendations without taking over, how to size to a proof of concept, how to explain any of it to someone without the vocabulary.
 
-## Devpost Learn Rules
+## Workshop Rules
 
-Keep this Devpost Learn experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without multiple-choice tools; explicit consent and sign-off can be yes/no. Honor the profile's preference for concise explanations or batches of at most two or three related questions. Keep the guided approach for learners new to planning first unless they request otherwise. In this technical stage, recommendations are allowed; consequential choices still need learner agreement. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. The AI may write planning docs once the consequential questions are answered, never invent the learner's intentions.
+Keep this workshop experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without multiple-choice tools; explicit consent and sign-off can be yes/no. Honor the profile's preference for concise explanations or batches of at most two or three related questions. Keep the guided approach for learners new to planning first unless they request otherwise. In this technical stage, recommendations are allowed; consequential choices still need learner agreement. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. The AI may write planning docs once the consequential questions are answered, never invent the learner's intentions.
 
 ## College hackathon
 
-If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `devpost/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
+If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `plan/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
 
 ## Where Are We
 
-Before anything else, look at the project's `devpost/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
+Before anything else, look at the project's `plan/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
 
 1. List which of these exist: `learner-profile.md`, `scope.md`, `prd.md`, `spec.md`, `checklist.md`. Read the `status:` line in each one's frontmatter.
 2. Say back where the learner is, in one sentence.
@@ -33,7 +33,7 @@ Save as soon as a first draft exists, with `status: draft`. Set `status: approve
 
 ## Before You Start
 
-Read `devpost/prd.md` thoroughly — the heading names under **Features and Behavior** are what the spec must implement and cite. Read the PRD's **Look and Feel** and scope's **Inspiration & Identity** for existing design direction. Read `devpost/scope.md` for **The Unique Kernel** and **The POC Boundary**. Read `devpost/learner-profile.md` for **Demonstrated Technical and Agent Experience**, **Planning-Workflow Experience**, **Collaboration and Communication Preferences**, **Desired Learning Outcome**, **Areas Where the Learner Wants Ownership**, and **Review Format**. Carry saved pacing preferences forward; coding seniority alone does not establish planning experience.
+Read `plan/prd.md` thoroughly — the heading names under **Features and Behavior** are what the spec must implement and cite. Read the PRD's **Look and Feel** and scope's **Inspiration & Identity** for existing design direction. Read `plan/scope.md` for **The Unique Kernel** and **The POC Boundary**. Read `plan/learner-profile.md` for **Demonstrated Technical and Agent Experience**, **Planning-Workflow Experience**, **Collaboration and Communication Preferences**, **Desired Learning Outcome**, **Areas Where the Learner Wants Ownership**, and **Review Format**. Carry saved pacing preferences forward; coding seniority alone does not establish planning experience.
 
 ## Set the Frame
 
@@ -87,7 +87,7 @@ When the readiness criteria are met, draft for review without asking permission 
 
 If they choose more, follow the topic they name at their preferred question pacing; don't impose another fixed questionnaire. Once that topic is resolved, write the draft unless they want to continue. If a consequential gap remains, name it concretely and resolve it before approval. Don't keep asking whether they're ready, and don't add hypothetical regret or loss questions before review.
 
-## Write `devpost/spec.md`
+## Write `plan/spec.md`
 
 Read `templates/spec-template.md` relative to this skill and fill it in from the conversation, with `status: draft`.
 
@@ -104,7 +104,7 @@ Save it immediately.
 
 ## The Review
 
-Show it in their **Review Format** and encourage a careful read. If HTML, explain that visual relationships and interactive reveals can make the blueprint faster to digest. Create `devpost/spec.html` with meaningful architecture/data-flow diagrams (Mermaid or inline SVG) and a journey stepper or component reveals tied to PRD behaviors and files. Not just rendered Markdown; no framework/build step, essential content usable offline, fallback for CDN-based diagrams. Markdown stays canonical; regenerate after revisions.
+Show it in their **Review Format** and encourage a careful read. If HTML, explain that visual relationships and interactive reveals can make the blueprint faster to digest. Create `plan/spec.html` with meaningful architecture/data-flow diagrams (Mermaid or inline SVG) and a journey stepper or component reveals tied to PRD behaviors and files. Not just rendered Markdown; no framework/build step, essential content usable offline, fallback for CDN-based diagrams. Markdown stays canonical; regenerate after revisions.
 
 Give two to four sentences of honest feedback: does every PRD behavior have a home, are the stack choices sensible for *them*, is it sized to a small proof of concept, is the file structure real.
 

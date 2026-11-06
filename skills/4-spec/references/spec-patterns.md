@@ -87,7 +87,7 @@ project/
 │   ├── pages/         # Route-level pages
 │   ├── lib/           # Shared utilities
 │   └── api/           # API routes or client
-├── devpost/           # Devpost learning workspace
+├── plan/           # the team's planning workspace
 ├── package.json
 └── README.md
 ```

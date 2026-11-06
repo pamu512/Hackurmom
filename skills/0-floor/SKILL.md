@@ -13,21 +13,21 @@ The people in the room supply the names and the idea. Do not invent teammates, a
 
 If they say "just do it for me," say: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller question.
 
-Read `hackathon/event.md` and `skills/hackathon-floor.md` before you ask anything. If `hackathon/event.md` is missing, say this copy of the curriculum has no event file, skip the floor file, and follow `1-start` as the original Devpost Learn track.
+Read `hackathon/event.md` and `skills/hackathon-floor.md` before you ask anything. If `hackathon/event.md` is missing, say this copy of the curriculum has no event file, skip the floor file, and follow `1-start` as the original original guided track.
 
 ## Where Are We
 
-Look at `devpost/` only. Ignore `skills/`, `hackathon/`, and template files.
+Look at `plan/` only. Ignore `skills/`, `hackathon/`, and template files.
 
-- No `devpost/floor.md` → first visit. Do the folder check, then the two questions.
-- `devpost/floor.md` exists and names who is here → say the team and the finish line in one sentence. Ask whether to keep it or redo it. If they keep it, go to **Hand Off**.
+- No `plan/floor.md` → first visit. Do the folder check, then the two questions.
+- `plan/floor.md` exists and names who is here → say the team and the finish line in one sentence. Ask whether to keep it or redo it. If they keep it, go to **Hand Off**.
 - `learner-profile.md` or later planning docs already exist → do not redo onboarding. Say where the project is and point at the unfinished skill (`1-start` through `6-ship`). Offer to fix the floor file only if the team in the room has changed.
 
 ## The Folder Check
 
 Do this before the questions on a first visit. The team should be in the workshop repo, not a home directory, downloads folder, or unrelated repository.
 
-Ignore curriculum material: dotfiles, `skills/`, `devpost/`, `hackathon/`, `.cursor/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, and `.gitignore`.
+Ignore curriculum material: dotfiles, `skills/`, `plan/`, `hackathon/`, `.cursor/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, and `.gitignore`.
 
 If you see an unrelated project, say: "This folder looks like it already has another project in it. This works best in the workshop folder your organizer gave you — I'd stop here and open that, so nothing gets tangled up." Then stop. Never offer to move to a different folder.
 
@@ -41,13 +41,13 @@ One person is a complete team. First names are enough. Do not ask for emails, st
 
 **2. State the finish line from the event file, then ask: "Does that match what your organizer told you?"**
 
-State only what the file requires. Example shape, using the file's real values: live demo on this laptop within the demo slot, and a public GitHub repository. Mention wifi-off, a video, Discord, or Devpost only when the file requires them. Include `submission_note` if it is non-empty.
+State only what the file requires. Example shape, using the file's real values: live demo on this laptop within the demo slot, and a public GitHub repository. Mention wifi-off, a video, Discord, or a submission platform only when the file requires them. Include `submission_note` if it is non-empty.
 
 If they say the organizer told them something else, believe the room: update `hackathon/event.md` only for a clear factual correction they attribute to the organizer (a required video, a submission link). Do not widen the project. If `event_name` or `campus` is still the placeholder ("Campus Build With AI", "Your college"), mention that once and keep going. Do not block on it.
 
-## Write `devpost/floor.md`
+## Write `plan/floor.md`
 
-Read `templates/floor-template.md` relative to this skill and fill it from the event file and their answers. Write it immediately. Add `/devpost/floor.md` and `/devpost/learner-profile.md` to `.gitignore` if they are not already there, preserving existing rules. Tell them briefly that the floor file keeps personal names out of git by default, not out of the AI provider's conversation.
+Read `templates/floor-template.md` relative to this skill and fill it from the event file and their answers. Write it immediately. Add `/plan/floor.md` and `/plan/learner-profile.md` to `.gitignore` if they are not already there, preserving existing rules. Tell them briefly that the floor file keeps personal names out of git by default, not out of the AI provider's conversation.
 
 ## Hand Off
 

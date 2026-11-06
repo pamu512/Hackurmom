@@ -23,7 +23,7 @@ doc: floor
 - Wifi-off demo: [required or not required]
 - Public GitHub: [required or not]
 - Demo video: [required, backup-only, or not]
-- Devpost: [url, or "not used"]
+- Submission: [url, or "not used"]
 - Turn-in note: [submission_note, or "none"]
 
 ## Constraints

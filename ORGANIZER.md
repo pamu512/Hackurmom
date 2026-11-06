@@ -10,7 +10,7 @@ The setup that has to be true before doors open is [PREREQUISITES.md](PREREQUISI
 - Install Git and one coding agent on the lab machines, or confirm students can sign in to their own. The agent must be able to edit this folder and run commands. Do not require a specific vendor. Confirm `git --version` works for the student account.
 - Put this folder on a USB stick as a backup copy. Cloning over wifi is fine.
 - Tell teams to create GitHub accounts beforehand. Account recovery mid-build ruins the demo.
-- The finish line is already set in `hackathon/event.md`: hackurmom at HKUST, a 300-second live demo, public GitHub, no video, no Devpost. Paid APIs are optional.
+- The finish line is already set in `hackathon/event.md`: hackurmom at HKUST, a 300-second live demo, public GitHub, no video, no platform submission. Paid APIs are optional.
 - Skim the six skills only if you want to know what "flipped interaction" means: the agent interviews, the team decides, the agent writes the plan down after they answer.
 
 You do not need Node unless someone insists on `npx skills add`. That path drops `hackathon/event.md`. Tell teams to open this folder instead.
@@ -45,9 +45,9 @@ Three checks. No slide deck.
 
 1. The kernel is visible in the live demo, started from `RUN.md`, within the demo slot.
 2. The team can name one decision they made and one thing they cut. If they cannot, the agent did the hackathon.
-3. The GitHub repo is public and contains no secrets. `devpost/learner-profile.md` and `devpost/floor.md` should not be in it.
+3. The GitHub repo is public and contains no secrets. `plan/learner-profile.md` and `plan/floor.md` should not be in it.
 
-Planning docs in `devpost/` are a plus only because they show the team made choices. Do not grade prose.
+Planning docs in `plan/` are a plus only because they show the team made choices. Do not grade prose.
 
 ## Mentor card
 
@@ -59,7 +59,7 @@ Use these when a team is stuck. Do not take the keyboard except to recover a mac
 | The agent asked them to pick a language or framework | "Stop. One web page, opened in the browser. You write the code. They click it." |
 | They are staring at the terminal | "Close that. The agent runs the commands. You look at the page." |
 | They think they are behind because they cannot code | "You are not the coder today. Your job is the idea and the clicks." |
-| Scope is a whole product | "What is the one interaction? Everything else is later." Point them at `devpost/scope.md` section **Explicitly Cut**. |
+| Scope is a whole product | "What is the one interaction? Everything else is later." Point them at `plan/scope.md` section **Explicitly Cut**. |
 | They are blocked on an API key | "The demo path cannot need a key. Ask the agent for sample data and a flag." |
 | Nothing runs at the freeze | "Drop the next feature. Make slice 1 stay up." |
 | They want the agent to write the pitch | "It can list the clicks. You say the sentences." |

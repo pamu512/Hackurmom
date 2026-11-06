@@ -18,7 +18,7 @@ REQUIRED_EVENT_KEYS = (
     "require_live_demo:",
     "require_public_github:",
     "require_video:",
-    "devpost_url:",
+    "submission_url:",
     "discord_url:",
     "submission_note:",
 )
@@ -102,7 +102,7 @@ def main() -> None:
         if settings.get("paid_apis") not in ("true", "false", "optional", None):
             failures.append("paid_apis in hackathon/event.md must be true, false, or optional")
 
-        for name in ("devpost_url", "discord_url"):
+        for name in ("submission_url", "discord_url"):
             value = settings.get(name)
             if value not in (None, "", "none") and not value.startswith(("http://", "https://")):
                 failures.append(f"{name} in hackathon/event.md must be a URL, 'none', or empty")
@@ -139,7 +139,7 @@ def main() -> None:
                 failures.append(f"{name} is missing skills/{name}/{rel}")
 
     floor_skill = read(ROOT / "skills" / "0-floor" / "SKILL.md") or ""
-    if "devpost/floor.md" not in floor_skill:
+    if "plan/floor.md" not in floor_skill:
         failures.append("0-floor skill is missing its floor file")
     template = read(ROOT / "skills" / "0-floor" / "templates" / "floor-template.md") or ""
     if "doc: floor" not in template:
@@ -175,7 +175,7 @@ def main() -> None:
             failures.append(f"skills/{name}/{rel} lost its status: draft frontmatter")
 
     ignore = read(ROOT / ".gitignore") or ""
-    for path in ("/devpost/learner-profile.md", "/devpost/floor.md"):
+    for path in ("/plan/learner-profile.md", "/plan/floor.md"):
         if path not in ignore:
             failures.append(f".gitignore missing {path}")
 

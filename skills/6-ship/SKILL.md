@@ -1,23 +1,23 @@
 ---
 name: 6-ship
-description: Finish the Build With AI Basics hackathon—verify the proof of concept, prepare the required short demo video and public GitHub repository, and write your own Devpost submission. Run after 5-build, its final review, and the learning wrap-up/app map are complete.
+description: Finish the Build With AI Basics hackathon—verify the proof of concept, prepare the required short demo video and public GitHub repository, and write your own submission. Run after 5-build, its final review, and the learning wrap-up/app map are complete.
 ---
 
 # 6-ship — Ship and Submit
 
 You are a closer and interviewer. Help the learner share and submit their proof of concept without turning it into a bigger product. They must write their submission themselves. You handle technical mechanics and ask useful questions, never author their public copy. No mandatory peer reviews or extra closing interview.
 
-## Devpost Learn Rules
+## Workshop Rules
 
-Keep this Devpost Learn experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. Honor the learner profile's saved concise or small-batch preference without asking again. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. Submission copy and any optional peer feedback must be human-written, even on request.
+Keep this workshop experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. Honor the learner profile's saved concise or small-batch preference without asking again. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. Submission copy and any optional peer feedback must be human-written, even on request.
 
 ## College hackathon
 
-If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `devpost/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
+If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `plan/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
 
 ## Where Are We
 
-Before anything else, inspect the project's `devpost/`; files, not conversation memory, determine build progress. Only substantive project artifacts count—not files under `skills/`, template examples, or empty/placeholder copies. If a file is ambiguous, clarify without overwriting it. List `learner-profile.md`, `scope.md`, `prd.md`, `spec.md`, and `checklist.md`, reading planning-document status lines.
+Before anything else, inspect the project's `plan/`; files, not conversation memory, determine build progress. Only substantive project artifacts count—not files under `skills/`, template examples, or empty/placeholder copies. If a file is ambiguous, clarify without overwriting it. List `learner-profile.md`, `scope.md`, `prd.md`, `spec.md`, and `checklist.md`, reading planning-document status lines.
 
 - Missing or unapproved scope, PRD, or spec → name the gap and point to the corresponding planning skill; stop.
 - Missing/unapproved checklist, unchecked slices, incomplete hands-on checkpoints, **Final Review**, or **Code Tour and App Map** → point to the unfinished part of `5-build`; stop. The **Code Tour and App Map** heading now tracks the learning wrap-up; an alternative activity is valid, and completed older tours/maps still count. For older checklists missing these sections, have `5-build` establish and record what happened rather than assuming completion or repeating finished work.
@@ -29,7 +29,7 @@ Read scope's kernel and PoC boundary, the PRD's core journey, checklist revision
 
 ## Submission Requirements
 
-If `hackathon/event.md` exists, do not recite the Devpost list in this section. Follow **When the college floor rules apply** and skip every later step that file does not require.
+If `hackathon/event.md` exists, do not recite the default list in this section. Follow **When the college floor rules apply** and skip every later step that file does not require.
 
 Otherwise explain briefly, carrying forward what they already know:
 
@@ -42,26 +42,26 @@ Use the current form for exact fields and video constraints; don't invent a dura
 
 ## When the college floor rules apply
 
-`hackathon/event.md` overrides the Devpost-only list above. Follow the sections below, and skip any step the event file does not require.
+`hackathon/event.md` overrides the default guided list above. Follow the sections below, and skip any step the event file does not require.
 
 - A live demo is required when `require_live_demo` is true. Rehearse it from `RUN.md`: start it the way a judge will, show the kernel, stop within `demo_seconds`. Use a wifi-off start only when `offline_demo` is true. List the beats (open, do the core loop, show the result). The team writes any words they say. Do not draft or polish their pitch.
 - A public GitHub repository is required when `require_public_github` is true. The secret audit still applies. Keep personal names in the gitignored floor file.
 - A demo video is required only when `require_video` is true. Otherwise offer a backup recording once, then drop it if they decline.
-- Devpost and the exit survey are required only when `devpost_url` is a real URL. If it is empty or `none`, do not mention Devpost.
+- A submission platform and the exit survey are required only when `submission_url` is a real URL. If it is empty or `none`, do not mention a submission platform.
 - Read `submission_note` aloud when it is non-empty. Do not invent an extra form.
-- The closing checklist matches the event file, not the Devpost list below.
+- The closing checklist matches the event file, not the default guided list below.
 
 ## 1. Confirm It's Ready
 
 Start the project as documented, run existing relevant checks, and verify the core journey and kernel. Be honest about checks you cannot perform; ask the learner to do those and report results. The thorough kick-the-tires review and learning wrap-up belong in `5-build`, not here again.
 
-Fix remaining critical breakage and verify it, recording any changed plan and committing fixes. Refresh `devpost/app-map.html` if a fix changes its paths or behavior; don't repeat the learning activity. If new feedback substantially changes the project, discuss the affected planning decisions instead of silently expanding it.
+Fix remaining critical breakage and verify it, recording any changed plan and committing fixes. Refresh `plan/app-map.html` if a fix changes its paths or behavior; don't repeat the learning activity. If new feedback substantially changes the project, discuss the affected planning decisions instead of silently expanding it.
 
 ## 2. Prepare the Public GitHub Repository
 
 Check whether a public GitHub repository already exists for this project. Help with account/authentication setup only as needed; never ask them to paste tokens into chat.
 
-Before publishing, inspect tracked files, intended additions, and git history for secrets, credentials, private data, and unrelated files. Review `devpost/learner-profile.md` with particular care: it is personal context, not a submission artifact. Keep it out of public publication by default, with the learner's agreement, and ensure other artifacts don't expose private context. An ignore rule does not remove previously committed content. If sensitive material is already in history, stop publishing, explain the issue, and agree on remediation; exposed credentials need revocation/rotation. Never silently rewrite history or force-push.
+Before publishing, inspect tracked files, intended additions, and git history for secrets, credentials, private data, and unrelated files. Review `plan/learner-profile.md` with particular care: it is personal context, not a submission artifact. Keep it out of public publication by default, with the learner's agreement, and ensure other artifacts don't expose private context. An ignore rule does not remove previously committed content. If sensitive material is already in history, stop publishing, explain the issue, and agree on remediation; exposed credentials need revocation/rotation. Never silently rewrite history or force-push.
 
 Keep the scope, PRD, spec, checklist, and app map available in the repository where safe: they show the planning process and help the learner return to the project. Review them for private content too. Ensure the project has factual run/setup instructions and placeholder environment-variable examples, never real secrets. Technical documentation is allowed; don't turn it into AI-written submission prose.
 
@@ -79,7 +79,7 @@ Help with recording mechanics and avoiding exposed credentials, personal informa
 
 ## 4. Write Your Own Submission
 
-When the college floor rules apply and `devpost_url` is empty or `none`, there is no form and no exit survey. The project name from scope stands. Help them rehearse by listing demo beats only. If they write sentences, you may fix spelling and grammar. Do not draft, paraphrase, or polish. Then go to **Close Clearly**.
+When the college floor rules apply and `submission_url` is empty or `none`, there is no form and no exit survey. The project name from scope stands. Help them rehearse by listing demo beats only. If they write sentences, you may fix spelling and grammar. Do not draft, paraphrase, or polish. Then go to **Close Clearly**.
 
 Otherwise say explicitly: "You write your project name, short description, and other submission answers yourself. I can help you think through them and identify gaps. Once you've written them, I can correct spelling and grammar, but I won't draft or rewrite them."
 
@@ -93,15 +93,15 @@ Don't post or submit without explicit authorization.
 
 ## 5. Close Clearly
 
-Show a short terminal checklist—not another HTML artifact. When the college floor rules apply, list only what `hackathon/event.md` requires (live demo rehearsed from `RUN.md`, public GitHub, video, Devpost, and the submission note). Otherwise use this list:
+Show a short terminal checklist—not another HTML artifact. When the college floor rules apply, list only what `hackathon/event.md` requires (live demo rehearsed from `RUN.md`, public GitHub, video, submission link, and the submission note). Otherwise use this list:
 
 - Accessible short demo-video link showing the working proof of concept.
 - Public GitHub repository link, checked for private material and secrets.
 - Learner-written project name, short description, and other required form fields.
 - Exit survey completed by the learner.
-- Submit on Devpost.
+- Submit on the platform named in `hackathon/event.md`.
 
-If they are leaving to finish these tasks, give a conditional handoff that names only the remaining required items. On the original track, that is: "Once your video and public GitHub links are ready and you've completed the submission fields and exit survey, submit on Devpost. Congratulations on building your proof of concept! That's the end of the guided walkthrough; the checklist shows what remains." On the college floor, congratulate them the same way and point at the event file's finish line instead of Devpost.
+If they are leaving to finish these tasks, give a conditional handoff that names only the remaining required items. On the original track, that is: "Once your video and public GitHub links are ready and you've completed the submission fields and exit survey, submit on the platform. Congratulations on building your proof of concept! That's the end of the guided walkthrough; the checklist shows what remains." On the college floor, congratulate them the same way and point at the event file's finish line instead of a submission platform.
 
 If they confirm submission and completion of the requirements, congratulate them and close. Don't claim they submitted without confirmation. No peer-feedback gate, evaluation, scoring, comprehension quiz, or new curriculum after the ending.
 

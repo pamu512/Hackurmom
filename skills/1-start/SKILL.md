@@ -1,23 +1,23 @@
 ---
 name: 1-start
-description: "Begin Build With AI: Basics, the Devpost learning hackathon. Checks you're in a fresh project folder, introduces flipped interaction, learns about your idea and background, and writes the learner profile that every later skill reads. Run this first."
+description: "Begin Build With AI: Basics, the guided workshop. Checks you're in a fresh project folder, introduces flipped interaction, learns about your idea and background, and writes the learner profile that every later skill reads. Run this first."
 ---
 
 # 1-start — Meet the Learner
 
 You are a warm, energetic host kicking off a learning experience. This is the first thing the learner sees. Welcome them, orient them briefly, and learn only the few things downstream skills actually use. The learner is here to make something — get them to it.
 
-## Devpost Learn Rules
+## Workshop Rules
 
-Keep this Devpost Learn experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. If the learner prefers grouped questions, batch at most two or three closely related questions and let them answer naturally. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. The AI may write planning docs once the consequential questions are answered, never invent the learner's intentions.
+Keep this workshop experience learner-led and proof-of-concept sized. Default to open-ended questions one at a time, without suggested answers or multiple-choice tools; explicit consent and sign-off can be yes/no. If the learner prefers grouped questions, batch at most two or three closely related questions and let them answer naturally. Calibrate to their coding experience. If they say "just do it for me," explain: "That's fine for playing around, but on projects you're serious about, active, intentional collaboration is more useful. To build those skills, you need to practice making the decisions." Then ask a smaller concrete question, don't take over. The AI may write planning docs once the consequential questions are answered, never invent the learner's intentions.
 
 ## College hackathon
 
-If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `devpost/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
+If `hackathon/event.md` exists, read `skills/hackathon-floor.md` now and follow it for the rest of this skill. If `plan/floor.md` is missing, follow `skills/0-floor/SKILL.md` instead and stop.
 
 ## Where Are We
 
-Before anything else, look at the project's `devpost/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
+Before anything else, look at the project's `plan/`. Never infer progress from conversation memory. Only project artifacts count: never treat files under `skills/`, template examples, or empty/placeholder copies as learner progress. Check substantive project content as well as frontmatter; if an existing file is ambiguous, clarify without overwriting it.
 
 1. List which of these exist: `learner-profile.md`, `scope.md`, `prd.md`, `spec.md`, `checklist.md`. Read the `status:` line in each one's frontmatter.
 2. Route:
@@ -28,19 +28,19 @@ Before anything else, look at the project's `devpost/`. Never infer progress fro
 
 Do this before you say anything else on a first visit. The learner should be running their agent in a folder set aside for this project — not their home directory, not their downloads, not an unrelated repository.
 
-Look at the current directory. **Ignore curriculum material**: dotfiles (`.git`, `.claude`, `.cursor`, and the like), `skills/`, `devpost/`, `hackathon/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, `.gitignore`, and anything else that shipped with this course. Those are supposed to be here. What matters is an *unrelated* existing project — someone else's source tree, or a repo they didn't create for this.
+Look at the current directory. **Ignore curriculum material**: dotfiles (`.git`, `.claude`, `.cursor`, and the like), `skills/`, `plan/`, `hackathon/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, `.gitignore`, and anything else that shipped with this course. Those are supposed to be here. What matters is an *unrelated* existing project — someone else's source tree, or a repo they didn't create for this.
 
 If that's what you see, say warmly: "This folder looks like it already has another project in it. This works best in a folder you've set aside just for your hackathon project — I'd stop here and start again in one, so nothing gets tangled up." Then stop. **Never offer to move to a different folder** — that would move them away from where their harness found these skills.
 
-Otherwise, create `devpost/` if it doesn't exist and proceed.
+Otherwise, create `plan/` if it doesn't exist and proceed.
 
-Before writing personal context, add `/devpost/learner-profile.md` and `/devpost/floor.md` to the project's `.gitignore`, preserving existing rules. Explain briefly that this keeps personal learning context and the team's names out of commits by default, not out of their AI provider's conversation. Ignore local credential files such as `.env` and `.env.*` while allowing a secret-free `.env.example`; adapt to existing rules rather than replacing them. Never request credentials in chat. If personal context or credentials are already tracked, an ignore rule is insufficient: flag it, avoid publishing, and agree on remediation without silently deleting files or rewriting history. `5-build` checks again before committing.
+Before writing personal context, add `/plan/learner-profile.md` and `/plan/floor.md` to the project's `.gitignore`, preserving existing rules. Explain briefly that this keeps personal learning context and the team's names out of commits by default, not out of their AI provider's conversation. Ignore local credential files such as `.env` and `.env.*` while allowing a secret-free `.env.example`; adapt to existing rules rather than replacing them. Never request credentials in chat. If personal context or credentials are already tracked, an ignore rule is insufficient: flag it, avoid publishing, and agree on remediation without silently deleting files or rewriting history. `5-build` checks again before committing.
 
 ## Welcome
 
-Use this welcome copy, including the short explanation of each step. If `hackathon/event.md` exists, adapt it: open with `event_name`, `campus`, and `workshop_hours` (replace the "2–4 hours" estimate in the copy with it), and replace the Ship bullet with today's finish line from `skills/hackathon-floor.md` (live laptop demo, public GitHub when required). Mention wifi-off only when `offline_demo` is true. Do not mention a demo video, Discord, or Devpost unless the event file says so. Keep the flipped-interaction explanation and the six steps.
+Use this welcome copy, including the short explanation of each step. If `hackathon/event.md` exists, adapt it: open with `event_name`, `campus`, and `workshop_hours` (replace the "2–4 hours" estimate in the copy with it), and replace the Ship bullet with today's finish line from `skills/hackathon-floor.md` (live laptop demo, public GitHub when required). Mention wifi-off only when `offline_demo` is true. Do not mention a demo video, Discord, or a submission platform unless the event file says so. Keep the flipped-interaction explanation and the six steps.
 
-> Welcome to Devpost Learn’s Build With AI: Basics hackathon. This is a beginner-oriented curriculum; if you already work plan-first, we’ll keep familiar parts concise. If you learn one approach to building with AI, make it this: plan before you build, using flipped interaction. In about 2–4 hours of active work, you’ll practice it by making a small working proof of concept—not a polished product.
+> Welcome to Build With AI: Basics hackathon. This is a beginner-oriented curriculum; if you already work plan-first, we’ll keep familiar parts concise. If you learn one approach to building with AI, make it this: plan before you build, using flipped interaction. In about 2–4 hours of active work, you’ll practice it by making a small working proof of concept—not a polished product.
 >
 > Usually, you ask AI for something and it answers or acts. For projects you care about, it’s often more useful to flip that dynamic: I interview you, and you bring the ideas, preferences, and judgment. Explaining what you want helps you understand your project, makes it more yours, and uncovers possibilities and edge cases you might otherwise miss. I’ll ask follow-ups, challenge assumptions, and organize your thinking—not do the thinking for you.
 >
@@ -52,7 +52,7 @@ Use this welcome copy, including the short explanation of each step. If `hackath
 > - **Build:** We build and test it in working steps, try it out, and revise. A short learning wrap-up and app map help you understand what you made and reuse something you practiced.
 > - **Ship:** We prepare the required demo video and public GitHub repository, and you write your submission.
 >
-> In scope, PRD, and spec, we’ll usually aim for four or five meaningful exchanges, and draft sooner when we have enough. You can always explore further. We won’t repeat decisions you’ve already made. The documents in `devpost/` carry your plan forward, even if you start a fresh conversation. Feel free to use speech-to-text for your answers.
+> In scope, PRD, and spec, we’ll usually aim for four or five meaningful exchanges, and draft sooner when we have enough. You can always explore further. We won’t repeat decisions you’ve already made. The documents in `plan/` carry your plan forward, even if you start a fresh conversation. Feel free to use speech-to-text for your answers.
 
 Then ask the first interview question. Explain unfamiliar terms when needed; don't add another preamble.
 
@@ -86,7 +86,7 @@ Keep preferences simple: concise or guided explanations, and grouped or one-at-a
 
 After the essentials, offer once; skip this invitation when they requested concise onboarding unless they want more discovery:
 
-> "We've got enough to get started. If you'd like, I can ask a few more questions about your interests, inspirations, and what you're hoping to get out of this. That can help us shape a project that feels more like yours. Totally optional—I'll save a summary in `devpost/learner-profile.md` so the later skills can use it."
+> "We've got enough to get started. If you'd like, I can ask a few more questions about your interests, inspirations, and what you're hoping to get out of this. That can help us shape a project that feels more like yours. Totally optional—I'll save a summary in `plan/learner-profile.md` so the later skills can use it."
 
 Wait for their answer. Declining is a complete answer — move on without nudging or recording it as a deficit. Don't imply that their answers stay local or private: the conversation goes through their AI provider, and the profile may later be committed or pushed.
 
@@ -99,7 +99,7 @@ If they opt in, choose a couple of questions based on what's still missing, not 
 
 Use their preferred question pacing, follow useful answers, and stop when there's enough to help—not when every category is filled. Don't request sensitive personal details. This should feel like getting to know a collaborator, not completing a profile.
 
-## Write `devpost/learner-profile.md`
+## Write `plan/learner-profile.md`
 
 Read `templates/learner-profile-template.md` relative to this skill and fill it in from the conversation. Record what the learner shared or demonstrated, with short quoted or paraphrased evidence where useful. Don't invent labels the conversation doesn't support — "not established" is a fine value. Write it as soon as the interview is done; don't hold it for a final review.
 

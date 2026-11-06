@@ -81,7 +81,7 @@ Build mode: [learn or fast — record once chosen; carry forward on resume]
 
 - [ ] Learning activity complete — guided route, focused alternative, prior practice connected, or brief recap
 - [ ] Optional edit and transfer reflection addressed — offered/declined/already covered/not applicable as appropriate
-- [ ] `devpost/app-map.html` generated from finished code, checked, and shown, including a project-grounded practice to reuse
+- [ ] `plan/app-map.html` generated from finished code, checked, and shown, including a project-grounded practice to reuse
 
 Activity and evidence: [what actually happened; real document/test/code references; unfinished work if interrupted]
 Route and stops: [actual paths and symbols; guided stops completed, or reference-only route]

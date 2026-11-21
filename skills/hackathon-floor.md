@@ -1,14 +1,14 @@
 # College hackathon floor
 
-Agent reference. Read this only when `hackathon/event.md` exists. It adapts the Devpost Learn curriculum to a local college hackathon. It does not replace learner-led planning, approval, or verification.
+Agent reference. Read this only when `hackathon/event.md` exists. It adapts the guided curriculum to a local college hackathon. It does not replace learner-led planning, approval, or verification.
 
 ## Read first
 
-Read `hackathon/event.md` and, if it exists, `devpost/floor.md`. The event file is the organizer's rules. The floor file is this team's copy of who is here and what "done" means today. If the floor file is missing, follow `skills/0-floor/SKILL.md` and stop. Never treat files under `skills/` or `hackathon/` as a team's progress.
+Read `hackathon/event.md` and, if it exists, `plan/floor.md`. The event file is the organizer's rules. The floor file is this team's copy of who is here and what "done" means today. If the floor file is missing, follow `skills/0-floor/SKILL.md` and stop. Never treat files under `skills/` or `hackathon/` as a team's progress.
 
 ## Who you are talking to
 
-One person drives the keyboard. Anyone on the team can answer. Record names only in `devpost/floor.md`. Do not run the full interview once per teammate. Do not invent teammates.
+One person drives the keyboard. Anyone on the team can answer. Record names only in `plan/floor.md`. Do not run the full interview once per teammate. Do not invent teammates.
 
 Decisions still come from the people in the room. If they say "just do it for me," use the same refusal as the skill you are in, then ask a smaller question.
 
@@ -47,7 +47,7 @@ Obey the booleans in `hackathon/event.md`:
 - `offline_demo`: when `true`, the demo still works with wifi off after dependencies are installed. When `false`, do not require that and do not spend interview time on it. A local fallback is welcome if it falls out of the design. Never fake the kernel. Label sample data as sample data.
 - `require_public_github`: a public repository a mentor can open.
 - `require_video`: a short video. If false, offer a backup recording once, then drop it if the team declines.
-- `devpost_url`: `none` or empty means do not send them to Devpost and do not ask for an exit survey. Any other value is the form, and the team writes every answer themselves.
+- `submission_url`: `none` or empty means do not send them to a submission platform and do not ask for an exit survey. Any other value is the form, and the team writes every answer themselves.
 - `submission_note`: say this when shipping. Do not invent a form.
 - `discord_url`: the only place a project intro may be suggested. If empty, never mention Discord.
 
@@ -55,7 +55,7 @@ Obey the booleans in `hackathon/event.md`:
 
 ## What each skill changes
 
-**1-start.** Welcome them to `event_name` at `campus`, name the workshop length, and state today's finish line. Keep flipped interaction and the six steps. When `mostly_new_to_code` is true, say the six steps in plain words (who you are, the idea, what someone sees, how it gets built, build it, show it) and say once that they will not write the code. Ask whether this is their first time only if they have not already said. Do not run a skills inventory. Ignore curriculum files in the folder check: dotfiles, `skills/`, `devpost/`, `hackathon/`, `.cursor/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, and `.gitignore`. Also gitignore `/devpost/floor.md` with the learner profile. Personal names stay out of commits by default.
+**1-start.** Welcome them to `event_name` at `campus`, name the workshop length, and state today's finish line. Keep flipped interaction and the six steps. When `mostly_new_to_code` is true, say the six steps in plain words (who you are, the idea, what someone sees, how it gets built, build it, show it) and say once that they will not write the code. Ask whether this is their first time only if they have not already said. Do not run a skills inventory. Ignore curriculum files in the folder check: dotfiles, `skills/`, `plan/`, `hackathon/`, `.cursor/`, `README.md`, `START.md`, `ORGANIZER.md`, `PREREQUISITES.md`, `AGENTS.md`, `CLAUDE.md`, `NOTICE`, and `.gitignore`. Also gitignore `/plan/floor.md` with the learner profile. Personal names stay out of commits by default.
 
 **2-scope.** "Working" means a judge can see the kernel on this laptop inside the demo slot. Add wifi-off only when `offline_demo` is true. Cut anything that cannot be shown. Do not aim the proof of concept at a full hackathon product.
 
@@ -63,9 +63,9 @@ Obey the booleans in `hackathon/event.md`:
 
 **4-spec.** The way someone tries it is the live laptop demo, not a deploy. When they need a recommendation, prefer one local stack and no paid API. When `mostly_new_to_code` is true, that recommendation is a single web page they open in a browser. You run it. Record the start steps in **Where It Runs and How Someone Tries It**. Require those steps to work with wifi off only when `offline_demo` is true. Deployment stays optional.
 
-**5-build.** Slice 1 must leave the kernel runnable with sample data and no network only when `offline_demo` is true. When it is false, a normal network during the demo is fine. When `mostly_new_to_code` is true, you start the page and they use the browser. Their check is what they see, not a command they run. Default to learn mode, and let learn mode mean using the page. Offer the code look once, then skip it if they decline. When that slice first runs, write `RUN.md` with those commands and update it if they change. Do not overwrite `README.md` and do not put secrets in `RUN.md`. Skip Discord unless `discord_url` is set. The handoff to `6-ship` names the live demo and a public GitHub repository, plus video or Devpost only when required.
+**5-build.** Slice 1 must leave the kernel runnable with sample data and no network only when `offline_demo` is true. When it is false, a normal network during the demo is fine. When `mostly_new_to_code` is true, you start the page and they use the browser. Their check is what they see, not a command they run. Default to learn mode, and let learn mode mean using the page. Offer the code look once, then skip it if they decline. When that slice first runs, write `RUN.md` with those commands and update it if they change. Do not overwrite `README.md` and do not put secrets in `RUN.md`. Skip Discord unless `discord_url` is set. The handoff to `6-ship` names the live demo and a public GitHub repository, plus video or a platform submission only when required.
 
-**6-ship.** The event file wins over the Devpost-only checklist. Rehearse the live demo from `RUN.md`: what to open, what to do, what result appears. You may list those beats. The team writes every word they say and every submission field. Do not draft, paraphrase, title, or polish their pitch, even if they ask. Spell and grammar fixes only, on text they already wrote.
+**6-ship.** The event file wins over the default guided checklist. Rehearse the live demo from `RUN.md`: what to open, what to do, what result appears. You may list those beats. The team writes every word they say and every submission field. Do not draft, paraphrase, title, or polish their pitch, even if they ask. Spell and grammar fixes only, on text they already wrote.
 
 ## Folder check
 

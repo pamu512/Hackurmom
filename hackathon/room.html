@@ -181,10 +181,13 @@
       </section>
       <section class="done">
         <h2>Done today</h2>
+        <!-- Finish-line lines carry data-flag-* hooks; hackathon/check.py verifies
+             they match hackathon/event.md. Remove or hide a line when its flag is false. -->
         <ul>
-          <li>It runs in the browser on this laptop.</li>
-          <li>A judge sees it in 300 seconds.</li>
-          <li>GitHub is public, and RUN.md starts the demo.</li>
+          <li data-flag-live-demo="yes">It runs in the browser on this laptop.</li>
+          <li data-flag-live-demo="yes">A judge sees it in <span data-demo-seconds="300">300 seconds</span>.</li>
+          <li data-flag-public-github="yes">GitHub is public, and RUN.md starts the demo.</li>
+          <li data-flag-video="no" hidden>Video: judges also watch a short recording.</li>
           <li>You can name one decision and one cut.</li>
         </ul>
       </section>

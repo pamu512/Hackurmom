@@ -44,11 +44,11 @@ Briefly connect **a real project decision or action → the evidence → a reusa
 
 Offer at most one optional question: "What would you do differently next time you start with an agent?" Skip it if they already expressed the takeaway. A short answer, uncertainty, or declining is complete. Don't demand they teach the concept back or require the reflection to proceed. Record personal responses only in the ignored profile, in their words, distinguishing them from your explanation. Never turn this into drafted submission or exit-survey copy.
 
-Show `devpost/app-map.html` and how to reopen it. Record under **Code Tour and App Map**: activity type and actual evidence, completed route/stops if applicable, edit outcome including declined/not applicable, and reflection offered/answered/declined/already covered. Check completion only for what actually happened. Sending instructions alone isn't a completed guided activity. No extra sign-off.
+Show `plan/app-map.html` and how to reopen it. Record under **Code Tour and App Map**: activity type and actual evidence, completed route/stops if applicable, edit outcome including declined/not applicable, and reflection offered/answered/declined/already covered. Check completion only for what actually happened. Sending instructions alone isn't a completed guided activity. No extra sign-off.
 
 ## The App Map
 
-Generate a compact standalone `devpost/app-map.html` in both modes, regardless of planning review-format preference. It is not an HTML build checklist or a new page in the learner's app. Use actual post-revision, post-edit code.
+Generate a compact standalone `plan/app-map.html` in both modes, regardless of planning review-format preference. It is not an HTML build checklist or a new page in the learner's app. Use actual post-revision, post-edit code.
 
 Include:
 - A plain-language overview of the app's purpose and few main pieces.

@@ -1,6 +1,6 @@
 # Start here
 
-You will plan a small project and build a proof of concept you can demo on this laptop. One person types. The whole team decides. There is no hard time limit — work at your team's pace, use the milestones below, and stop building when your organizer calls the freeze before the demo slot.
+You will plan a small project and build a proof of concept you can demo on this laptop. One person types. The whole team decides. There is no hard time limit: work at your team's pace, use the milestones below, and stop building when your organizer calls the freeze before the demo slot.
 
 You do not need to have written code before. That is the normal case in this room. You say what it should do, what to leave out, and what you see when you click it. The agent writes the code and runs the commands. You will not use the terminal.
 
@@ -36,7 +36,7 @@ Work through the milestones in order. Most teams take about three hours; your te
 
 When your organizer calls the build freeze (usually 25 minutes before the demo slot), all building stops and every team rehearses. That is the only deadline.
 
-If you went to the pre-mixer, your laptop is already checked and this goes faster. Times, where mentioned, are the typical picture, not a rule — your organizer's `hackathon/event.md` and the freeze call are what count.
+If you went to the pre-mixer, your laptop is already checked and this goes faster. Times, where mentioned, are the typical picture, not a rule. Your organizer's `hackathon/event.md` and the freeze call are what count.
 
 ## What "done" is
 
